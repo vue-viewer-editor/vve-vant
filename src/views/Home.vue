@@ -18,7 +18,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home {
-  padding-top: 100px;
+  padding-top: 5px;
   text-align: center;
 
   img {
