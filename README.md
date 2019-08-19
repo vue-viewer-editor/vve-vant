@@ -1,4 +1,4 @@
-# vve-vant2
+# vve-vant
 
 ## Project setup
 ```
