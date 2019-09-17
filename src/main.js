@@ -1,5 +1,7 @@
 import './amfe-flexible'
 import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vve-vue-axios'
 // fontawesome 图标
 import '@fortawesome/fontawesome-free/css/all.css'
 import './vant'
@@ -10,6 +12,8 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+
+Vue.use(VueAxios, axios)
 
 new Vue({
   router,

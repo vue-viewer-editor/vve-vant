@@ -6,27 +6,53 @@
       <van-button size="normal" class="__p_6y_u_5">按钮</van-button>
     </div>
     <van-image src="https://img.yzcdn.cn/vant/cat.jpeg" width="100" height="100"></van-image>
-    <van-button type="primary" size="normal" block>按钮</van-button><span>我是文本</span>
+    <van-button type="primary" size="normal" block @click="sendRequest">发请求</van-button>
+    <span>我是文本</span>
     <p>我是一段文本1223123不懂防守打法是否升级风口浪尖福利科技副书记付款了伺服电机萨拉废旧塑料ffdsf阿双方均萨克拉附近三分附近阿萨德来看附件三SaaS312312312312312312aaa</p>
     <div class="__p_6y_u_10"></div>
   </div>
 </template>
 <script>
-  export default {}
+export default {
+  methods: {
+    sendRequest() {
+      this.$axios({
+        method: "get",
+        url: "https://cnodejs.org/api/v1/topics",
+        params: {
+          page: 1,
+          limit: 1
+        }
+      })
+        .then(() => {
+          this.$toast({
+            type: "success",
+            message: '成功'
+          });
+        })
+        .catch(() => {
+          this.$toast({
+            type: "fail",
+            message: '失败'
+          });
+        });
+    }
+  }
+};
 </script>
 
 <style scoped>
-  .__p_6y_u_3 {
-    color: red;
-  }
+.__p_6y_u_3 {
+  color: red;
+}
 
-  .__p_6y_u_5 {
-    color: red;
-  }
+.__p_6y_u_5 {
+  color: red;
+}
 
-  .__p_6y_u_10 {
-    width: 210px;
-    height: 122px;
-    background: #B83E3E;
-  }
+.__p_6y_u_10 {
+  width: 210px;
+  height: 122px;
+  background: #b83e3e;
+}
 </style>
